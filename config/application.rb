@@ -1,6 +1,7 @@
-require_relative 'boot'
+require_relative "boot"
 
-require 'rails/all'
+require "rails/all"
+require "action_view/component/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -15,5 +16,9 @@ module AvcFormBuilder
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+
+    config.autoload_paths += %w[lib/]
+    config.action_view.field_error_proc = Proc.new { |html_tag, _instance| html_tag.html_safe
+}
   end
 end

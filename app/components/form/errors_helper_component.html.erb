@@ -1,0 +1,7 @@
+<% if object_errors? %>
+  <ul class="form--errors">
+    <% object_errors.each do |error| %>
+    <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>

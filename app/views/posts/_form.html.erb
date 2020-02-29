@@ -1,0 +1,17 @@
+<%= form_with(model: post, local: true) do |f| %>
+  <%= f.group :title do %>
+    <%= f.text_field :title %>
+  <% end %>
+
+  <%= f.group :content do %>
+    <%= f.text_area :content %>
+  <% end %>
+
+  <%= f.group :published_at do %>
+    <%= f.datetime_select :published_at %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.submit %>
+  <% end %>
+<% end %>
