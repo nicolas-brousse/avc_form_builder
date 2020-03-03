@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Form
-  class ErrorsHelperComponent < ActionView::Component::Base
+  class ErrorsHelperComponent < ApplicationComponent
     validates :form, presence: true
     validates :object_name, presence: true
     validates :method, presence: true

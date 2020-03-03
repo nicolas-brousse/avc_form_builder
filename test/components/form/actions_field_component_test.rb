@@ -1,6 +1,6 @@
 require "test_helper"
 
-class Form::ActionsFieldComponentTest < ActionView::Component::TestCase
+class Form::ActionsFieldComponentTest < ViewComponent::TestCase
   test "component renders something useful" do
     # assert_equal(
     #   %(<span title="my title">Hello, components!</span>),

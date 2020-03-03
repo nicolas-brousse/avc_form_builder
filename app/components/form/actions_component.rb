@@ -1,4 +1,4 @@
-class Form::ActionsComponent < ActionView::Component::Base
+class Form::ActionsComponent < ApplicationComponent
   validates :form, presence: true
   validates :options, presence: true
   validates :content, presence: true

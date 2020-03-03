@@ -1,5 +1,5 @@
 module Form
-  class GroupComponent < ActionView::Component::Base
+  class GroupComponent < ApplicationComponent
     validates :form, presence: true
     validates :object_name, presence: true
     validates :method, presence: true

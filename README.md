@@ -1,4 +1,4 @@
-# Supercharge Rails form helper with ActionView::Component POC
+# Supercharge Rails form helper with ViewComponent POC
 
 This is a try to supercharge [Rails form helpers](https://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html) with a custom [FormBuilder](https://api.rubyonrails.org/classes/ActionView/Helpers/FormBuilder.html) and by using components with [`actionview-component` gem](https://github.com/github/actionview-component).
 

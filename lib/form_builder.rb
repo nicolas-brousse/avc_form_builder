@@ -6,9 +6,9 @@ class FormBuilder < ActionView::Helpers::FormBuilder
   %i[text_field text_area datetime_field datetime_select].each do |selector|
     component_klass = "Form::#{selector.to_s.classify}Component".safe_constantize
 
-    unless component_klass.is_a?(Class) && component_klass < ActionView::Component::Base
+    unless component_klass.is_a?(Class) && component_klass < ViewComponent::Base
       raise NameError, "Component #{component_klass} doesn't exists" \
-        " or is not a ActionView::Component::Base class"
+        " or is not a ViewComponent::Base class"
     end
 
     class_eval <<-RUBY_EVAL, __FILE__, __LINE__ + 1
