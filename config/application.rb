@@ -20,5 +20,7 @@ module AvcFormBuilder
     config.autoload_paths += %w[lib/]
     config.action_view.field_error_proc = Proc.new { |html_tag, _instance| html_tag.html_safe
 }
+
+    config.paths.add "app/components", eager_load: true # , glob: "**/*_component.rb"
   end
 end
