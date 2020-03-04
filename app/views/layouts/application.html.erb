@@ -91,6 +91,10 @@
       </header>
       <main>
         <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+          <% flash.each do |type, message| %>
+            <%= render AlertComponent.new(type: type, message: message) %>
+          <% end %>
+
           <%= yield %>
         </div>
       </main>
