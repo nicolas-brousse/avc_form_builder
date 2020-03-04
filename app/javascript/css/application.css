@@ -38,3 +38,5 @@ div.actions {
 
 label {
   display: block; }
+
+@import "_components";

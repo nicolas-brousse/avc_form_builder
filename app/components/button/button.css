@@ -1,0 +1,21 @@
+.btn {
+  @apply font-bold py-2 px-4 rounded inline-block;
+}
+
+.btn--primary {
+  @apply bg-blue-500 text-white;
+}
+
+.btn--primary:hover {
+  @apply bg-blue-700;
+}
+
+.btn-group .btn:first-child {
+  @apply rounded-l;
+}
+.btn-group .btn {
+  @apply rounded-none;
+}
+.btn-group .btn:last-child {
+  @apply rounded-r;
+}
