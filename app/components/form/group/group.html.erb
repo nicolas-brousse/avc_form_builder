@@ -1,5 +1,5 @@
 <div class="form--field">
   <%= form.label method %>
   <%= content %>
-  <%= render(Form::ErrorsHelperComponent.new(form, object_name, method)) %>
+  <%= render(Form::ErrorsHelperComponent.new(form: form, method: method)) %>
 </div>

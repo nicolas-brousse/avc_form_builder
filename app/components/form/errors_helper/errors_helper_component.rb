@@ -3,15 +3,14 @@
 module Form
   class ErrorsHelperComponent < ApplicationComponent
     validates :form, presence: true
-    validates :object_name, presence: true
     validates :method, presence: true
 
-    attr_reader :form, :object_name, :method
+    attr_accessor :form, :method, :options
 
-    def initialize(form, object_name, method)
-      @form = form
-      @object_name = object_name
-      @method = method
+    def initialize(*)
+      @options = {}
+
+      super
     end
 
     def object_errors
