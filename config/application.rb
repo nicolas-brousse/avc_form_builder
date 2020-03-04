@@ -22,5 +22,24 @@ module AvcFormBuilder
 }
 
     config.paths.add "app/components", eager_load: true # , glob: "**/*_component.rb"
+
+    Rails.autoloaders.each do |autoloader|
+      # components_path = Rails.root.join("app/components")
+
+      # components_path.glob("**/*_component.rb").each do |component_path|
+      #   path = component_path.to_s.gsub(components_path.to_s, "").chomp("_component.rb")
+      #   binding.irb
+      #   autoloader.collapse("app/components/button")
+      # end
+      autoloader.collapse("app/components/button")
+      autoloader.collapse("app/components/form/text_field")
+      autoloader.collapse("app/components/form/text_area")
+      autoloader.collapse("app/components/form/datetime_field")
+      autoloader.collapse("app/components/form/datetime_select")
+      autoloader.collapse("app/components/form/group")
+      autoloader.collapse("app/components/form/errors_helper")
+      autoloader.collapse("app/components/form/actions")
+      autoloader.collapse("app/components/form/submit")
+    end
   end
 end
