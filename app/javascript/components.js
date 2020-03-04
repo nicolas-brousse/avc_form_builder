@@ -6,9 +6,7 @@ const context = require.context("../components/", true, /_controller\.js$/)
 const definitions = definitionsFromContext(context)
 
 definitions.map(definition => {
-  definition["identifier"] = definition["identifier"].replace(/--/g, "_")
-    .replace(/_[a-z-]+$/, "")
-    .replace(/_/g, "--")
+  definition["identifier"] = definition["identifier"].replace(/--[a-z]+(-[a-z]+)?$/, "")
 
   return definition
 })
