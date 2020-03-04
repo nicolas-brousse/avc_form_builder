@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<%= render ButtonComponent.new(title: "New Post", href: new_post_path) %>
+
 <h1>Posts</h1>
 
 <table>
@@ -25,7 +27,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>
