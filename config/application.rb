@@ -18,7 +18,11 @@ module AvcFormBuilder
     # the framework and any gems in your application.
 
     config.autoload_paths += %w[lib/]
-    config.action_view.field_error_proc = Proc.new { |html_tag, _instance| html_tag.html_safe
-}
+    config.action_view.field_error_proc = proc { |html_tag, _instance| html_tag.html_safe }
+
+    autoloader = Rails.autoloaders.main
+    autoloader.collapse("app/components/alert")
+    autoloader.collapse("app/components/button")
+    autoloader.collapse("app/components/form/*")
   end
 end

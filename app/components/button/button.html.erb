@@ -1,0 +1,9 @@
+<% if link? %>
+  <%= link_to href, class: "btn btn--primary", data: { controller: stimulus_controller_name } do %>
+    <%= content %>
+  <% end %>
+<% else %>
+  <%= content_tag :button, name: :button, class: "btn btn--primary", data: { controller: stimulus_controller_name } do %>
+    <%= content %>
+  <% end %>
+<% end %>
